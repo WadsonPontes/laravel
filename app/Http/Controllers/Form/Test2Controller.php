@@ -56,8 +56,9 @@ class Test2Controller extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
-    {
+    public function show(User $user) {
+        // $user = User::where('id', $id)->first();
+
         return view('listUser', [
             'user' => $user
         ]);

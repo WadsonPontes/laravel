@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('usuarios', 'Form\\Test2Controller')->names('user')->parameters(['usuarios' => 'user']);
+Route::get('login', 'AuthController@login')->name('login');
+Route::post('logindo', 'AuthController@logindo')->name('login.do');
+Route::get('logout', 'AuthController@logout')->name('logout');
+Route::get('dashboard', 'DashboardController@dashboard')->name('dashboard');
+
+// Route::resource('usuarios', 'Form\\Test2Controller')->names('user')->parameters(['usuarios' => 'user']);
 
 /*
 Rout::group(['namespace' => 'Form'], function() {
