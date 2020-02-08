@@ -6,6 +6,7 @@
 </head>
 <body>
 	<h1>Logado com sucesso!</h1>
+	<p>Olá {{ $user->name }}</p>
 	<a href="{{ route('logout') }}">Logout</a>
 </body>
 </html>

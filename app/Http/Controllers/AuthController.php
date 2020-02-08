@@ -22,7 +22,7 @@ class AuthController extends Controller {
     	if (Auth::attempt($credentials))
 			return redirect()->route('dashboard');
 
-		return redirect()->route('login');
+		return redirect()->back()->withInput()->withErrors(['Os dados informados não conferem!']);
     }
 
     public function logout() {
